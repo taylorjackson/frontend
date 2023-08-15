@@ -9,7 +9,7 @@
 
 {#if ready}
   <header>
-    <img in:fade={{ duration: 1500 }} src="./src/continuum.jpg" alt="Impossible Triangle"/>
+    <img in:fade={{ duration: 1500 }} src="continuum.jpg" alt="Impossible Triangle"/>
     <h1 in:fly={{ y: 40, duration: 3000 }}>ContinuumDAO</h1>
   </header>
   <main>

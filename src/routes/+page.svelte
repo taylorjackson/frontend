@@ -24,7 +24,7 @@
     margin: 0;
     padding: 0;
     /*background-color: #fffefe;*/
-    background-color: #000;
+    background-color: #fffefe;
   }
 
   header {

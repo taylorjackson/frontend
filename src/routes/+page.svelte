@@ -9,11 +9,11 @@
 
 {#if ready}
   <header>
-    <img in:fade={{ duration: 1500 }} src="continuum.png" alt="Impossible Triangle"/>
+    <img in:fade={{ duration: 1500 }} src="continuum-old.png" alt="Impossible Triangle"/>
     <h1 in:fly={{ y: 40, duration: 3000 }}>ContinuumDAO</h1>
   </header>
   <main>
-    <a in:fade={{ delay: 1000, duration: 1000 }} href="http://localhost:5173" target="_blank">White Paper Coming Soon</a>
+    <a in:fade={{ delay: 1000, duration: 1000 }} href="" target="_blank">White Paper Coming Soon</a>
   </main>
 {/if}
 

@@ -68,7 +68,7 @@
 
   :global(body.dark-mode) {
     background-color: #111010;
-    color: aquamarine;
+    color: #4d8fa1;
   }
 
   header {

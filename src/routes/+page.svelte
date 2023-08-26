@@ -18,7 +18,7 @@
     for(let j = 0; j < groups[i].links.length; j++) {
       const currentLink = currentGroup.links[j]
       currentSocialsList = currentSocialsList.concat(`
-        <li><a href="${currentLink.url}" target="_blank">${currentLink.name}</a></li>
+        <a href="${currentLink.url}" target="_blank"><li>${currentLink.name} &#8599</li></a>
       `)
     }
 
@@ -31,6 +31,10 @@
       </ul>
     `)
   }
+
+  const toggleDarkMode = () => {
+    window.document.body.classList.toggle("dark-mode")
+  }
 </script>
 
 
@@ -40,8 +44,10 @@
     <h1 in:fly={{ y: 40, duration: 3000 }}>ContinuumDAO</h1>
   </header>
   <main>
-    <a in:fade={{ delay: 1000, duration: 1000 }} href="groups.js" download>
-      Download White Paper
+    <a in:fade={{ delay: 1000, duration: 1000 }} href="">
+      <button id="download-white-paper" on:click={toggleDarkMode}>
+        Download White Paper
+      </button>
     </a>
   </main>
   <footer>
@@ -57,6 +63,12 @@
     padding: 0;
     background-color: #fffefe;
     color: #444;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  :global(body.dark-mode) {
+    background-color: #111010;
+    color: aquamarine;
   }
 
   header {
@@ -89,36 +101,61 @@
     margin: 150px auto;
   }
 
-  a {
+  :global(a) {
     text-decoration: none;
-    color: royalblue;
-    padding: 10px;
-    border-radius: 10px;
-    font-weight: 600;
-    outline: 2px solid royalblue;
+    color: inherit;
   }
 
-  a:hover {
+  #download-white-paper {
+    color: #174650;
+    padding: 10px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s ease;
     background-color: aquamarine;
-    transition: 0.5s ease;
+    cursor: pointer;
+    opacity: 0.9;
+  }
+
+  #download-white-paper:hover {
+    color: #174650;
+    opacity: 1;
+    box-shadow: 0 0 5px aquamarine;
   }
 
   footer {
-    width: 40%;
+    width: 50%;
     margin: 0 auto;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
 
-  :global(li) {
+  @media only screen and (max-width: 1000px) {
+    footer {
+      width: 100%;
+      flex-direction: column;
+      justify-content: normal;
+      align-items: center;
+    }
+  }
+
+  :global(ul) {
+    min-width: 200px;
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
   }
 
-  :global(.link-icon) {
-    width: 25px;
-    height: 25px;
+  :global(li) {
+    list-style-type: none;
+    width: 100px;
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
   }
 </style>

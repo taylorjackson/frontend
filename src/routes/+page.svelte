@@ -3,6 +3,8 @@
   import { fade, fly } from "svelte/transition"
   import groups from "../groups"
 
+  import wpDownload from "../White_Paper_ContinuumDAO.pdf"
+
   let ready = false
 
   onMount(() => {
@@ -10,6 +12,7 @@
   })
 
   let socials = ""
+
 
   for(let i = 0; i < groups.length; i++) {
     let currentSocialsList = ""
@@ -35,6 +38,7 @@
   const toggleDarkMode = () => {
     window.document.body.classList.toggle("dark-mode")
   }
+
 </script>
 
 
@@ -44,9 +48,9 @@
     <h1 in:fly={{ y: 40, duration: 3000 }}>ContinuumDAO</h1>
   </header>
   <main>
-    <a in:fade={{ delay: 1000, duration: 1000 }} href="">
-      <button id="download-white-paper" on:click={toggleDarkMode}>
-        Download White Paper
+    <a in:fade={{ delay: 1000, duration: 1000 }} href={wpDownload}>
+      <button id="download-white-paper" on:click={()=>{}}>
+        View White Paper
       </button>
     </a>
   </main>

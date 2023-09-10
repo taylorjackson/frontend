@@ -5,17 +5,17 @@ const groups = [
       {
         name: "X",
         url: "https://twitter.com/ContinuumDAO",
-        icon: "x-black.png"
+        icon: ""
       },
       {
         name: "Medium",
         url: "https://medium.com/@continuumdao",
-        icon: "medium-black.png"
+        icon: ""
       },
       {
         name: "GitHub",
         url: "https://github.com/ContinuumDAO",
-        icon: "github-black.png"
+        icon: ""
       }
     ]
   },

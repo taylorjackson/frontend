@@ -27,6 +27,11 @@ const groups = [
         url: "https://t.me/ContinuumDAO",
         icon: ""
       },
+      {
+        name: "Forum",
+        url: "https://forum.continuumdao.org",
+        icon: ""
+      }
     //   {
     //     name: "Discord",
     //     url: "",

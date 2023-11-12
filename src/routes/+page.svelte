@@ -53,6 +53,7 @@
         View White Paper
       </button>
     </a>
+    <button id="toggle-dark-mode" in:fade={{ delay: 1000, duration: 1000 }} on:click={toggleDarkMode}>&#9728</button>
   </main>
   <footer>
     {@html socials}
@@ -99,8 +100,8 @@
 
   main {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
     width: 100%;
     margin: 150px auto;
   }
@@ -111,6 +112,7 @@
   }
 
   #download-white-paper {
+    height: 40px;
     color: #174650;
     padding: 10px;
     font-weight: 600;
@@ -123,6 +125,31 @@
   }
 
   #download-white-paper:hover {
+    color: #174650;
+    opacity: 1;
+    box-shadow: 0 0 5px aquamarine;
+  }
+
+  #toggle-dark-mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: #174650;
+    margin: 0 10px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    background-color: aquamarine;
+    cursor: pointer;
+    opacity: 0.9;
+  }
+
+  #toggle-dark-mode:hover {
     color: #174650;
     opacity: 1;
     box-shadow: 0 0 5px aquamarine;
